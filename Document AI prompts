@@ -1,0 +1,13 @@
+# AI Prompts Documentation
+
+## Project Setup & Scaffolding
+- **Prompt:** "How do I upload this index.html file to my GitHub repository and deploy it with GitHub Pages step by step?"
+- **Result:** Received step-by-step guidance to create `index.html` and configure GitHub Pages deployment.
+
+## Code Generation & Styling
+- **Prompt:** "Generate a responsive personal bio page with dark mode and structured sections."
+- **Result:** Created HTML5 template with semantic elements (`header`, `nav`, `main`, `section`, `footer`) and modular CSS styling.
+
+## Troubleshooting Deployment
+- **Prompt:** "Getting 404 error on GitHub Pages."
+- **Result:** Reconfigured deployment source branch to `main` root and cleared browser cache to render the live site.
