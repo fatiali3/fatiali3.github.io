@@ -1,1 +1,39 @@
+.breadcrumb {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
 
+.breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.project-hero {
+    background-color: var(--bg-card);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.meta-bar {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: var(--bg-body);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.code-snippet {
+    background-color: #011627;
+    color: #d6deeb;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: monospace;
+    margin: 1rem 0;
+}
