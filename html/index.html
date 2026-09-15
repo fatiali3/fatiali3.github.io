@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatima | Personal Bio & Portfolio</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <h1>Fatima's Space</h1>
+        <p>Software Engineer & Web Designer</p>
+    </header>
+
+    <nav aria-label="Main Navigation" role="navigation">
+        <span class="logo">Fatima.dev</span>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌗 Theme</button>
+    </nav>
+
+    <main id="main-content" tabindex="-1">
+        
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>I design clean interfaces and write structured frontend code. Passionate about modern web architectures and accessibility.</p>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Technical Skills</h2>
+            <p><strong>Frontend:</strong> HTML5, CSS3 (Grid & Flexbox), Modern JavaScript (ES6+).</p>
+            <p><strong>Tools & Workflows:</strong> Git, GitHub Pages, Prompt Engineering, Figma.</p>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Featured Projects</h2>
+            
+            <!-- Primary Featured Project Linking to Page 2 -->
+            <article class="project-card">
+                <h3>Interactive Web Application Case Study</h3>
+                <p>A deep-dive technical showcase detailing application architecture, challenges, and AI workflows.</p>
+                <a href="project-detail.html" class="btn-primary">View Full Case Study →</a>
+            </article>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Me</h2>
+            <form id="contactForm" onsubmit="handleFormSubmit(event)" aria-label="Contact Form">
+                <label for="name">Name <span aria-hidden="true">*</span>:</label>
+                <input type="text" id="name" required aria-required="true" placeholder="Your Name">
+
+                <label for="email">Email <span aria-hidden="true">*</span>:</label>
+                <input type="email" id="email" required aria-required="true" placeholder="Your Email">
+
+                <label for="message">Message <span aria-hidden="true">*</span>:</label>
+                <textarea id="message" rows="4" required aria-required="true" placeholder="Your Message"></textarea>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+
+            <div id="successMessage" style="display: none;" role="status" aria-live="polite">
+                Thank you! Your message has been sent successfully.
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Fatima. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
