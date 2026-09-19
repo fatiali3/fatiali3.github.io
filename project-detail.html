@@ -17,108 +17,78 @@
         <a href="index.html" class="btn-primary">← Back to Overview</a>
     </nav>
 
-    <main id="main-content" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+    <main id="main-content" style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
         
         <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="index.html">Home</a> / <a href="index.html#projects">Projects</a> / <span>Interactive Web App</span>
         </nav>
 
-        <!-- Project Hero Header -->
         <section class="project-hero">
             <h1>Interactive Web Application Case Study</h1>
-            <p>A comprehensive frontend architecture built for high performance, modularity, and accessibility compliance.</p>
+            <p>A comprehensive frontend architecture built for responsiveness, performance, and strict WCAG AAA accessibility standards.</p>
             
             <div class="meta-bar">
                 <div><strong>Role:</strong> Lead Frontend Developer</div>
                 <div><strong>Timeline:</strong> 3 Weeks</div>
-                <div><strong>Stack:</strong> HTML5, Modular CSS3, ES6+ JS</div>
+                <div><strong>Stack:</strong> HTML5, CSS Grid, Vanilla JS</div>
             </div>
 
-            <!-- Featured Mockup Image -->
-            <figure style="margin: 1.5rem 0;">
+    
+            <figure style="margin: 1.5rem 0 1rem 0;">
                 <img src="assets/images/project-preview.png" 
-                     alt="Screenshot of the Interactive Web Application interface showing dark mode layout" 
+                     alt="Screenshot showing the main interface of Fatima's portfolio application" 
                      style="width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--card-border); display: block;">
                 <figcaption style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">
-                    Figure 1: High-fidelity layout preview displaying modular cards and accessible navigation.
+                    Figure 1: Visual preview of the portfolio interactive layout.
                 </figcaption>
             </figure>
 
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                <a href="https://github.com/fatiali3/fatiali3.github.io" class="btn-primary" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
-                <a href="index.html" class="btn-secondary" style="padding: 0.6rem 1.2rem; border: 1px solid var(--card-border); border-radius: 6px; text-decoration: none; color: var(--text-main);">Live Demo Landing Page</a>
-            </div>
+            <a href="https://github.com/fatiali3/fatiali3.github.io" class="btn-primary" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
         </section>
 
-        <!-- Metrics & Highlights -->
-        <section style="margin: 2.5rem 0;">
-            <h2>Key Outcomes & Performance Metrics</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                <div style="background: var(--bg-card); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--card-border); text-align: center;">
-                    <h3 style="color: var(--accent); margin-bottom: 0.3rem;">100 / 100</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Lighthouse Accessibility Score</p>
-                </div>
-                <div style="background: var(--bg-card); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--card-border); text-align: center;">
-                    <h3 style="color: var(--accent); margin-bottom: 0.3rem;">&lt; 0.8s</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">First Contentful Paint (FCP)</p>
-                </div>
-                <div style="background: var(--bg-card); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--card-border); text-align: center;">
-                    <h3 style="color: var(--accent); margin-bottom: 0.3rem;">0 Dependencies</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Pure Vanilla CSS & Javascript</p>
-                </div>
-            </div>
+        <section>
+            <h2>1. Problem Statement & Challenge</h2>
+            <p>Modern web users demand fast, accessible, and responsive applications. The goal was to engineer a clean two-page web portfolio without reliance on heavy external frameworks like Bootstrap or React, ensuring ultra-fast load times and high Lighthouse compliance scores.</p>
         </section>
 
-        <!-- Problem & Solution -->
-        <section style="margin: 2.5rem 0;">
-            <h2>Problem Statement & Objectives</h2>
-            <p>Modern web development often relies on bulky frameworks that introduce performance bottlenecks and accessibility oversights. The objective of this project was to design a lightweight, fully modular portfolio and case study platform using standard web APIs while guaranteeing WCAG compliance.</p>
+        <section>
+            <h2>2. Key Technical Features</h2>
+            <ul>
+                <li><strong>Decoupled Architecture:</strong> Complete separation of concerns between structure (HTML), styling (CSS), and logic (JS).</li>
+                <li><strong>Dynamic Theme Switcher:</strong> Persistent dark/light mode toggle utilizing CSS custom properties and local browser storage.</li>
+                <li><strong>Accessible Form Validation:</strong> Real-time input handling with ARIA live regions for screen-reader feedback.</li>
+                <li><strong>Responsive Grid Layouts:</strong> Flexbox and CSS Grid structures optimized across all mobile and desktop viewports.</li>
+            </ul>
         </section>
 
-        <!-- Architecture & Code Showcase -->
-        <section style="margin: 2.5rem 0;">
-            <h2>Technical Architecture & Modular Structure</h2>
-            <p>The system decouples styles and scripts into discrete modules. Global tokens reside in <code>variables.css</code>, while view-specific rules are loaded independently to prevent CSS bloat.</p>
-            
-            <h3>Accessibility Implementation Sample</h3>
-            <p>Screen-reader notification and live region handling are implemented via decoupled JavaScript modules:</p>
+        <section>
+            <h2>3. Technical Architecture & Implementation</h2>
+            <p>Utilized a modular CSS architecture separating design tokens (`variables.css`) from layout rules (`base.css` & `landing.css`), paired with plain Vanilla JS for interactive states.</p>
             
             <div class="code-snippet">
-                <pre><code>// Dynamic ARIA Live Region update for form validation
+                <pre><code>// Example: Accessibility live region notification handler
 function notifyScreenReader(message) {
     const liveRegion = document.getElementById('successMessage');
-    if (liveRegion) {
-        liveRegion.textContent = message;
-        liveRegion.setAttribute('aria-live', 'polite');
-    }
+    liveRegion.textContent = message;
+    liveRegion.setAttribute('aria-live', 'polite');
 }</code></pre>
             </div>
         </section>
 
-        <!-- AI Workflow Reflection -->
-        <section style="margin: 2.5rem 0;">
-            <h2>AI Workflow Integration & Methodology</h2>
-            <p>Generative AI and LLM agents were integrated throughout the development lifecycle to streamline design and testing:</p>
-            <ul>
-                <li><strong>Code Scaffolding:</strong> Generating clean, semantic HTML5 boilerplate markup.</li>
-                <li><strong>A11y Auditing:</strong> Simulating screen reader behavior and identifying high-contrast color pairings.</li>
-                <li><strong>Refactoring:</strong> Modularizing monolithic CSS files into discrete, manageable sub-stylesheets.</li>
-            </ul>
+        <section>
+            <h2>4. AI Workflow & Optimization Strategy</h2>
+            <p>Generative AI tools were integrated throughout the development workflow to audit accessibility compliance, assist in scaffolding semantic HTML tags, and optimize CSS variable configurations for peak performance.</p>
         </section>
 
-        <!-- Bottom Navigation CTA -->
-        <section style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-            <div>
-                <h3 style="margin: 0 0 0.3rem 0;">Interested in exploring more?</h3>
-                <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Return to the main page to test the contact form and theme switcher.</p>
-            </div>
-            <a href="index.html" class="btn-primary">← Back to Overview</a>
+        <section>
+            <h2>5. Outcomes & Future Enhancements</h2>
+            <p>The project successfully achieved 90+ ratings across Lighthouse audits. Future iterations will include integrating external REST APIs for dynamic project fetching and automated deployment pipelines.</p>
         </section>
 
     </main>
 
-    <footer style="text-align: center; padding: 2rem; margin-top: 2rem; border-top: 1px solid var(--card-border);">
-        <p>&copy; 2026 Fatima. <a href="index.html#contact" style="color: var(--accent);">Ready to collaborate? Let's talk.</a></p>
+    <footer style="text-align: center; padding: 2rem;">
+        <p>&copy; 2026 Fatima. <a href="index.html#contact">Ready to collaborate? Let's talk.</a></p>
     </footer>
 
     <script src="js/main.js"></script>
