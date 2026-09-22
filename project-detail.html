@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Case Study | Fatima Portfolio</title>
+    <title>Project Case Study | Fatima's Space</title>
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/project-detail.css">
@@ -14,61 +14,65 @@
 
     <nav aria-label="Main Navigation">
         <span class="logo">Fatima.dev</span>
-        <a href="index.html" class="btn-primary">← Back to Overview</a>
+        <a href="index.html" class="btn-primary" style="font-size: 0.9rem;">← Back to Overview</a>
     </nav>
 
-    <main id="main-content" style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <main id="main-content" style="max-width: 850px; margin: 2rem auto; padding: 0 1.5rem;">
         
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="index.html">Home</a> / <a href="index.html#projects">Projects</a> / <span>Interactive Web App</span>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+            <a href="index.html" style="color: var(--accent-color); text-decoration: none;">Home</a> / 
+            <a href="index.html#projects" style="color: var(--accent-color); text-decoration: none;">Projects</a> / 
+            <span>Interactive Web App</span>
         </nav>
 
+        <!-- Hero Card -->
         <section class="project-hero">
-            <h1>Interactive Web Application Case Study</h1>
-            <p>A comprehensive frontend architecture built for responsiveness, performance, and strict WCAG AAA accessibility standards.</p>
+            <h1 style="font-size: 2rem; font-weight: 800;">Interactive Web Application Case Study</h1>
+            <p style="font-size: 1.05rem;">A comprehensive frontend architecture built for responsiveness, performance, and strict WCAG AAA accessibility standards.</p>
             
-            <div class="meta-bar">
+            <div class="meta-bar" style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0; padding: 1rem; background: rgba(0,0,0,0.15); border-radius: 8px;">
                 <div><strong>Role:</strong> Lead Frontend Developer</div>
                 <div><strong>Timeline:</strong> 3 Weeks</div>
                 <div><strong>Stack:</strong> HTML5, CSS Grid, Vanilla JS</div>
             </div>
 
-    
-            <figure style="margin: 1.5rem 0 1rem 0;">
+            <!-- Preview Image -->
+            <figure style="margin: 1.5rem 0;">
                 <img src="assets/images/project-preview.png" 
                      alt="Screenshot showing the main interface of Fatima's portfolio application" 
-                     style="width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--card-border); display: block;">
-                <figcaption style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">
+                     style="width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--card-border); box-shadow: var(--shadow-lg); display: block;">
+                <figcaption style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 0.75rem;">
                     Figure 1: Visual preview of the portfolio interactive layout.
                 </figcaption>
             </figure>
 
-            <a href="https://github.com/fatiali3/fatiali3.github.io" class="btn-primary" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
+            <a href="https://github.com/fatiali3/fatiali3.github.io" class="btn-primary" target="_blank" rel="noopener noreferrer">View GitHub Repository ↗</a>
         </section>
 
+        <!-- Content Sections -->
         <section>
             <h2>1. Problem Statement & Challenge</h2>
-            <p>Modern web users demand fast, accessible, and responsive applications. The goal was to engineer a clean two-page web portfolio without reliance on heavy external frameworks like Bootstrap or React, ensuring ultra-fast load times and high Lighthouse compliance scores.</p>
+            <p>Users require fast, accessible, and structured web interfaces that operate smoothly across mobile and desktop devices without unnecessary framework overhead.</p>
         </section>
 
         <section>
             <h2>2. Key Technical Features</h2>
-            <ul>
-                <li><strong>Decoupled Architecture:</strong> Complete separation of concerns between structure (HTML), styling (CSS), and logic (JS).</li>
-                <li><strong>Dynamic Theme Switcher:</strong> Persistent dark/light mode toggle utilizing CSS custom properties and local browser storage.</li>
-                <li><strong>Accessible Form Validation:</strong> Real-time input handling with ARIA live regions for screen-reader feedback.</li>
-                <li><strong>Responsive Grid Layouts:</strong> Flexbox and CSS Grid structures optimized across all mobile and desktop viewports.</li>
+            <ul style="margin-left: 1.2rem; color: var(--text-secondary);">
+                <li style="margin-bottom: 0.5rem;"><strong>Decoupled Modular Architecture:</strong> Complete separation between structure, styling, and interactivity.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Dynamic Theme Mode:</strong> Persistent light/dark mode configuration utilizing CSS variables.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Accessible Contact Form:</strong> Real-time input handling with ARIA live regions for screen readers.</li>
             </ul>
         </section>
 
         <section>
             <h2>3. Technical Architecture & Implementation</h2>
-            <p>Utilized a modular CSS architecture separating design tokens (`variables.css`) from layout rules (`base.css` & `landing.css`), paired with plain Vanilla JS for interactive states.</p>
+            <p>Utilized custom CSS variables (`variables.css`) for consistent design tokens, alongside Vanilla JavaScript for state management and accessibility announcements.</p>
             
-            <div class="code-snippet">
-                <pre><code>// Example: Accessibility live region notification handler
+            <div style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; border: 1px solid var(--card-border); font-family: monospace; font-size: 0.9rem; overflow-x: auto; margin-top: 1rem;">
+<pre><code>// Example: Accessibility live region notification handler
 function notifyScreenReader(message) {
-    const liveRegion = document.getElementById('successMessage');
+    const liveRegion = document.getElementById('form-feedback');
     liveRegion.textContent = message;
     liveRegion.setAttribute('aria-live', 'polite');
 }</code></pre>
@@ -77,18 +81,18 @@ function notifyScreenReader(message) {
 
         <section>
             <h2>4. AI Workflow & Optimization Strategy</h2>
-            <p>Generative AI tools were integrated throughout the development workflow to audit accessibility compliance, assist in scaffolding semantic HTML tags, and optimize CSS variable configurations for peak performance.</p>
+            <p>Generative AI tools were integrated into the development cycle to conduct automated accessibility audits, assist in semantic HTML scaffolding, and optimize CSS variables for high contrast scores.</p>
         </section>
 
         <section>
             <h2>5. Outcomes & Future Enhancements</h2>
-            <p>The project successfully achieved 90+ ratings across Lighthouse audits. Future iterations will include integrating external REST APIs for dynamic project fetching and automated deployment pipelines.</p>
+            <p>The project successfully achieved 90+ ratings across all Lighthouse audits. Future enhancements will involve integrating external REST APIs for dynamic project fetching.</p>
         </section>
 
     </main>
 
-    <footer style="text-align: center; padding: 2rem;">
-        <p>&copy; 2026 Fatima. <a href="index.html#contact">Ready to collaborate? Let's talk.</a></p>
+    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+        <p>&copy; 2026 Fatima. <a href="index.html#contact" style="color: var(--accent-color);">Ready to collaborate? Let's talk.</a></p>
     </footer>
 
     <script src="js/main.js"></script>
