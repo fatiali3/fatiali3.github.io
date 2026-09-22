@@ -16,7 +16,6 @@ body {
     transition: var(--transition-fast);
 }
 
-
 .skip-link {
     position: absolute;
     top: -100px;
@@ -54,6 +53,32 @@ nav {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.theme-toggle-btn {
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--text-primary);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+    background: var(--card-border);
+    transform: scale(1.05);
+    border-color: var(--card-border-hover);
+}
+
+.theme-toggle-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
 }
 
 .btn-primary {
